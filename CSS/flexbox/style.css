@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    background-color: #222831;
+}
+
+.item {
+    width: 25px;
+    height: 25px;
+    background-color: #3FA9F5;
+    border-radius: 3px;
+    color: #fff;
+    text-align: center;
+    /*the margin of the element represents the outside of the element itself,
+    while the paddings represents the inner space surrouding the element */
+    padding: 30px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+    /* flex-grow specifies how much the item will grow relative to the rest of the flexible 
+    items inside the same container, you can use it individually through 
+    the IDs, so it's gonna grow n times than other item */
+
+    /* flex-shrink is the same as flex-grow, but how much it shrinks as its name says. */
+     flex: 1 1 0px
+    /* same as
+    flex-grow:1;
+    flex-shrink:1;
+    flex-basis: 0px;
+    */
+}
+
+.container {
+    /* it sets whether an element is treated as a block or inline box and the layout
+    used for its children, such as flow layout, grid or flex */
+    display: flex;
+    border: 2px solid black;
+    /* it determines the main axis direction */
+    flex-direction: row;
+    /* aligns the items along that main axis.  
+    center, flex-start, flex-end, space-between, space-around, space-evenly */
+    justify-content: center;
+    /* controls alignments on the cross axis */
+    align-items: center;
+    /* it's used to create space between the items*/
+    gap: 10px;
+    /* it defines whether the flex items are forced in a single line or can be flowed into
+    multiple lines */
+    flex-wrap: wrap;
+}
