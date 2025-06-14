@@ -13,6 +13,12 @@ To generate the next number of the sequence, we sum the previous two.*/
 //memoizaton 
 //  js object, keys will be arg to fn, value will be the return value
 
+/**
+ * 
+ * @param {number} n 
+ * @param {{[key: number]: number}} [memo={}] 
+ * @returns {number}
+ */
 const fib = (n, memo = {}) => {
     if (n in memo) return memo[n];
     if (n <= 2) return 1;
@@ -20,7 +26,4 @@ const fib = (n, memo = {}) => {
     return memo[n];
 }
 
-let foo = fib(50)
-
-console.time('process')
-console.timeLog('process', fib(50))
+console.log(fib(50))
